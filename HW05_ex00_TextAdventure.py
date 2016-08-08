@@ -13,7 +13,7 @@ def infinite_stairway_room(name,count=0):
     
     # infinite stairs option
     if next == "take stairs":
-        print('{} take the stairs'.format(name))
+        print('{} takes the stairs'.format(name))
         if (count > 0):
             print("but {} is not happy about it".format(name))
         infinite_stairway_room(name, count + 1)
@@ -23,7 +23,7 @@ def infinite_stairway_room(name,count=0):
 
 
 def gold_room(name):
-    print("This room is full of gold.  How much do {} take?".format(name))
+    print("This room is full of gold.  How much does {} take?".format(name))
 
     next = input("> ")
     if "0" in next or "1" in next:
@@ -35,7 +35,7 @@ def gold_room(name):
         print("Nice, {} is not greedy, {} wins!".format(name, name))
         exit(0)
     else:
-        dead("{} greedy goose!".format(name))
+        dead("{} is a greedy goose!".format(name))
 
 
 def bear_room(name):
@@ -62,8 +62,8 @@ def bear_room(name):
 
 
 def cthulhu_room(name):
-    print("Here {} see the great evil Cthulhu.".format(name))
-    print("He, it, whatever stares at {} and you go insane.".format(name))
+    print("Here {} sees the great evil Cthulhu.".format(name))
+    print("He, it, whatever stares at {} and {} goes insane.".format(name, name))
     print("Do {} flee for {} life or eat {} head?".format(name, name + '\'s', name + '\'s'))
 
     next = input("> ")
@@ -96,7 +96,7 @@ def main():
     elif next == "right":
         cthulhu_room(name)
     else:
-        dead("{} stumbles around the room until {} starve.".format(name, name))
+        dead("{} stumbles around the room until {} starves.".format(name, name))
 
 if __name__ == '__main__':
     main()
